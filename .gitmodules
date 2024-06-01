@@ -1,9 +1,9 @@
-[submodule "DaisySP"]
-	path = DaisySP
-	url = https://github.com/electro-smith/DaisySP.git
 [submodule "DaisyExamples"]
 	path = DaisyExamples
 	url = https://github.com/electro-smith/DaisyExamples.git
-[submodule "libDaisy"]
-	path = libDaisy
+[submodule "Kardio/libDaisy"]
+	path = Kardio/libDaisy
 	url = https://github.com/electro-smith/libDaisy.git
+[submodule "Kardio/DaisySP"]
+	path = Kardio/DaisySP
+	url = https://github.com/electro-smith/DaisySP.git
