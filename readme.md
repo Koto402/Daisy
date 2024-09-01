@@ -14,6 +14,7 @@ Clone the git repo and create a docker image with the included makefile:
 make docker_create_image
 ```
 
+Note when calling the below scripts there may be an issue using bash. Use cmd instead if this call fails.
 Build the example projects:
 ```sh
 make build_examples
