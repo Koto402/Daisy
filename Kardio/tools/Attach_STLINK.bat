@@ -1,0 +1,1 @@
+usbipd attach --wsl --hardware-id=0483:3754

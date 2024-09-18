@@ -6,8 +6,7 @@ build_examples:
 	dos2unix -n ci/build_examples.py ci/build_examples_docker.py && \
 	python ci/build_examples_docker.py"
 
-
-build_kardio:
+build_libs_kardio:
 	docker run -it --rm -v $(CURDIR)/Kardio:/app daisy:latest \
 	/bin/bash -c "cd /app &&\
 	dos2unix -n tools/build_libs.sh tools/build_libs_docker.sh && \

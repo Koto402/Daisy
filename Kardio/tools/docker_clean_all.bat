@@ -1,0 +1,1 @@
+docker run -it --rm -v %cd%:/app daisy:latest /bin/bash -c "cd /app/ && make clean && cd /app/libDaisy && make clean && cd /app/DaisySP && make clean"

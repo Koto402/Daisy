@@ -1,0 +1,1 @@
+docker run -it --rm --device=/dev/bus/usb:/dev/bus/usb -v %cd%:/app daisy:latest /bin/bash -c "cd /app && make program
