@@ -31,6 +31,8 @@ First, use usbipd to find the hardware id of your ST-LINK:
 ```sh
 usbipd list
 ```
+This will list your usb devices as such:
+
 ![usbipd list output](assets/usbipd-list.png)
 
 The hardware id is in this case 0483:3754.
@@ -39,7 +41,7 @@ This ST-LINK must be attached to wsl through the following command:
 usbipd attach --wsl --hardware-id=0483:3754
 ```
 
-Afterwards when running commands in the docker image, the usb device must be attached by passing the --device parameter: 
+Afterwards when running commands through the Docker container that require the ST-LINK, the usb device must be attached by passing the --device parameter: 
 ```sh
 --device=/dev/bus/usb:/dev/bus/usb
 ```

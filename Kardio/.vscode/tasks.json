@@ -43,6 +43,13 @@
       "options": {"cwd": "${workspaceFolder}"},
     },
     {
+      "label": "Attach STLINK",
+      "command": "${workspaceFolder}/tools/Attach_STLINK.bat",
+      "type": "shell",
+      "group": {"kind": "build"},
+      "options": {"cwd": "${workspaceFolder}"},
+    },
+    {
       "label": "build libDaisy",
       "command": "${workspaceFolder}/tools/docker_make_libDaisy.bat",
       "problemMatcher": "$gcc",
