@@ -60,11 +60,19 @@ class DelayLine
 
     void Process(const float fIn, float *fOut)
     {
-        //Read
+        Read(fOut);
+        Write(fIn);
+    }
+
+    void Read(float *fOut)
+    {
         uint32_t ui32Read = (_ui32Write - _ui32Delay + _ui32MaxSize) % _ui32MaxSize;
         *fOut = _fDelayLine[ui32Read];
-   
-        //Write
+    }
+
+    void Write(const float fIn)
+    {
+        uint32_t ui32Read = (_ui32Write - _ui32Delay + _ui32MaxSize) % _ui32MaxSize;
         _fDelayLine[_ui32Write] = fIn +  _fDelayLine[ui32Read] * _fFeedback;
         _ui32Write = (_ui32Write + 1) % _ui32MaxSize;
     }

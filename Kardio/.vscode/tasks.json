@@ -5,65 +5,110 @@
       "command": "${workspaceFolder}/tools/docker_make.bat",
       "problemMatcher": "$gcc",
       "type": "shell",
-      "group": {"isDefault": true, "kind": "build"},
-      "options": {"cwd": "${workspaceFolder}"}
+      "group": {
+        "isDefault": true,
+        "kind": "build"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
     },
     {
       "label": "build all",
-      "dependsOn": ["build libDaisy","build DaisySP"],
+      "dependsOn": [
+        "build libDaisy",
+        "build DaisySP"
+      ],
       "command": "${workspaceFolder}/tools/docker_make.bat",
       "problemMatcher": "$gcc",
       "type": "shell",
-      "group": {"kind": "build"},
-      "options": {"cwd": "${workspaceFolder}"},
+      "group": {
+        "kind": "build"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
     },
     {
       "label": "clean",
       "command": "${workspaceFolder}/tools/docker_clean.bat",
       "problemMatcher": "$gcc",
       "type": "shell",
-      "group": {"kind": "build"},
-      "options": {"cwd": "${workspaceFolder}"}
+      "group": {
+        "kind": "build"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
     },
     {
       "label": "clean all",
       "command": "${workspaceFolder}/tools/docker_clean_all.bat",
       "problemMatcher": "$gcc",
       "type": "shell",
-      "group": {"kind": "build"},
-      "options": {"cwd": "${workspaceFolder}"}
+      "group": {
+        "kind": "build"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
     },
     {
       "label": "build and program",
       "dependsOn": "build",
       "command": "${workspaceFolder}/tools/docker_program.bat",
-      "problemMatcher":"$gcc",
+      "problemMatcher": "$gcc",
       "type": "shell",
-      "group": {"kind": "build"},
-      "options": {"cwd": "${workspaceFolder}"},
+      "group": {
+        "kind": "build"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
     },
     {
       "label": "Attach STLINK",
       "command": "${workspaceFolder}/tools/Attach_STLINK.bat",
       "type": "shell",
-      "group": {"kind": "build"},
-      "options": {"cwd": "${workspaceFolder}"},
+      "group": {
+        "kind": "build"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
     },
     {
       "label": "build libDaisy",
       "command": "${workspaceFolder}/tools/docker_make_libDaisy.bat",
       "problemMatcher": "$gcc",
       "type": "shell",
-      "group": {"kind": "build"},
-      "options": {"cwd": "${workspaceFolder}"},
+      "group": {
+        "kind": "build"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
     },
     {
       "label": "build DaisySP",
       "command": "${workspaceFolder}/tools/docker_make_DaisySP.bat",
       "problemMatcher": "$gcc",
       "type": "shell",
-      "group": {"kind": "build"},
-      "options": {"cwd": "${workspaceFolder}"}
+      "group": {
+        "kind": "build"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "Serial connect",
+      "command": "plink -serial COM6 -sercfg 115200",
+      "type": "shell",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
     }
   ],
   "version": "2.0.0"
