@@ -8,8 +8,7 @@ LDFLAGS += -u _printf_float
 #######################################
 
 # Sources
-CPP_SOURCES = main.cpp\
-$(wildcard Effects/Reverb/*.cpp) \
+CPP_SOURCES = main.cpp
 
 # Library Locations
 LIBDAISY_DIR = libDaisy
